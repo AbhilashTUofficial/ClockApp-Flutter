@@ -1,4 +1,5 @@
 import 'package:clock_app_flutter/export.dart';
+import 'package:clock_app_flutter/main.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -8,25 +9,19 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int _currentTab = 0;
-  final tabs = [Clock(), Timer(), StopWatch(), Alarm()];
+  final tabs = [Clock(), TimerScreen(), StopWatch(), Alarm()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         actions: [
-          Container(
-            margin: EdgeInsets.only(right: 15),
-            child: GestureDetector(
-              child: Icon(
-                Icons.settings,
-                size: 28,
-                color: Theme.of(context).iconTheme.color,
-              ),
-              onTap: (){
-                print("settings");
-              },
-            ),
+          Icon(
+            Icons.settings,
+            size: 28,
+            color: Color.fromRGBO(254,60,114,1),
           )
         ],
       ),
@@ -45,23 +40,20 @@ class _HomeState extends State<Home> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.access_time_sharp,
-              color: secondaryLightColor,
               size: 32,
             ),
             title: Text(
               "Clock",
-              style: TextStyle(fontSize: 14),
+              style: TextStyle(fontSize: 14,),
             ),
             activeIcon: Icon(
               Icons.access_time_sharp,
-              color: primaryColor,
               size: 32,
             ),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.timer_10,
-              color: secondaryLightColor,
               size: 32,
             ),
             title: Text(
@@ -70,14 +62,12 @@ class _HomeState extends State<Home> {
             ),
             activeIcon: Icon(
               Icons.timer_10,
-              color: primaryColor,
               size: 32,
             ),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.timer,
-              color: secondaryLightColor,
               size: 32,
             ),
             title: Text(
@@ -86,14 +76,12 @@ class _HomeState extends State<Home> {
             ),
             activeIcon: Icon(
               Icons.timer,
-              color: primaryColor,
               size: 32,
             ),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.alarm,
-              color: secondaryLightColor,
               size: 32,
             ),
             title: Text(
@@ -102,7 +90,6 @@ class _HomeState extends State<Home> {
             ),
             activeIcon: Icon(
               Icons.alarm,
-              color: primaryColor,
               size: 32,
             ),
           ),
