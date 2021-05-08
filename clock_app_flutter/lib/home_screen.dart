@@ -18,10 +18,13 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
-          Icon(
-            Icons.settings,
-            size: 28,
-            color: Color.fromRGBO(254,60,114,1),
+          Container(
+            padding: EdgeInsets.all(10),
+            child: Icon(
+              Icons.settings,
+              size: 28,
+              color: Color.fromRGBO(254,60,114,1),
+            ),
           )
         ],
       ),

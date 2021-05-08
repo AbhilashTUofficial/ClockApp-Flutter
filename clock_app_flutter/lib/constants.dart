@@ -13,3 +13,16 @@ BoxDecoration timerContDec(context){
         )
       ]);
 }
+
+BoxDecoration stopWatchContDec(context){
+  return BoxDecoration(
+      color: Theme.of(context).primaryColor,
+      borderRadius: BorderRadius.circular(5),
+      boxShadow: [
+        BoxShadow(
+          color: Theme.of(context).accentColor,
+          offset: Offset(2, 2),
+          blurRadius: 4,
+        )
+      ]);
+}
